@@ -16,4 +16,4 @@ Install Debian packages
 
 Install additional Perl modules
 
-    cpanm -l local --skip-satisfied PICA::Data RDF::aREF 
+    cpanm -l local --skip-satisfied PICA::Data RDF::aREF Plack::Util::Load 

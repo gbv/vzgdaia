@@ -78,11 +78,9 @@ sub daia_items {
     my ($self, $holdings, $epnbase) = @_;
     my $items = [];
     foreach my $hold (@$holdings) {
-        bless $hold, 'PICA::Data'; # FIXME
         my $iln = $hold->value('101@$a');
         my $it = $hold->items;
         foreach my $item (@{ $hold->items }) {
-            bless $item, 'PICA::Data'; # FIXME
             my $ind = $item->value('209A$d'); # 209A $d : Ausleihindikator
             my $sst = $item->value('209A$f'); # Sonderstandort
             # TODO: Konvolutindikator (209A $c) und der Hinweis auf Mehrfachexemplare (209A $e)

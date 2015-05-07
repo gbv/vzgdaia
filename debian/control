@@ -1,0 +1,11 @@
+Source: gvkdaia
+Section: misc
+Priority: extra
+Maintainer: Jakob Voß <jakob.voss@gbv.de>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.2
+ 
+Package: gvkdaia
+Architecture: any
+Depends: perl-base (>= 5.14.1), cpanminus, starman, libplack-perl, libxml-libxml-perl, libhttp-tiny-perl, libmodule-build-tiny-perl, libtry-tiny-perl, libyaml-libyaml-perl, librdf-ns-perl, librdf-trine-perl
+Description: gvkdaia

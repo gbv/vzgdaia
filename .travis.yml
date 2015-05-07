@@ -1,0 +1,18 @@
+language: bash
+before_install:
+    - sudo make dependencies
+install:
+    # don't use perlbrew
+    - sudo chown -R travis:travis /home/travis/.cpanm
+    - make local
+script:
+#    - export PACKAGE=`perl -ne 'print $1 if /^Package:\s+(.+)/;' < debian/control`
+    - export TEST_URL=app
+    - prove -Ilib -Ilocal/lib/perl5 -v
+#    - make release-file
+#    - sudo dpkg -i ${PACKAGE}_*.deb
+#    - sudo service ${PACKAGE} status
+#    - sudo service ${PACKAGE} restart
+#    - export TEST_URL=deployed
+#    - prove -Ilib -v
+cache: apt
